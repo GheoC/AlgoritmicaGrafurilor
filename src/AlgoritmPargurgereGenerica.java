@@ -10,7 +10,7 @@ public class AlgoritmPargurgereGenerica {
         Graph graph = new Graph();
 
         Node node1 = new Node(1, Arrays.asList(2,3));
-        Node node2 = new Node(2, Arrays.asList(3,4,5));
+        Node node2 = new Node(2, Arrays.asList(3,4));
         Node node3 = new Node(3, Arrays.asList(2,5));
         Node node4 = new Node(4, Arrays.asList());
         Node node5 = new Node(5, Arrays.asList(2,4));
@@ -23,9 +23,9 @@ public class AlgoritmPargurgereGenerica {
         graph.printGraph();
 
 
-        graph.parcurgereGenerala(5);
+        graph.parcurgereGenerala(1);
 
-        System.out.println(graph.getLinks(2));
+  //      System.out.println(graph.getLinks(2));
 
     }
 }

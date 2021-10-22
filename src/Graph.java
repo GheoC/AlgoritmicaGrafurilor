@@ -74,6 +74,7 @@ public class Graph
 
             List<Integer> selectedNodeLinks= getLinks(selectedNode);
 
+
             if (!selectedNodeLinks.isEmpty())
             {
                 k++;
@@ -88,22 +89,15 @@ public class Graph
                     }
 
                 }
-            } else
-            {
             }
-
-
-
-
-
-
-
-
-
-
+            vizited.remove(selectedNode);
+            analized.add(selectedNode);
         }
 
-
+        System.out.println("And the result is: ");
+        System.out.println(p);
+        System.out.println("order is: ");
+        System.out.println(o);
     }
 
 }
