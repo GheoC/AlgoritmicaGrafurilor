@@ -56,28 +56,29 @@ public class Graph
             o.add(-1);
         }
         unvizited.remove(startNode);
-    //    System.out.println(unvizited);
-
         List<Integer> vizited = new ArrayList<>();
         vizited.add(startNode);
-      //  System.out.println(vizited);
         List<Integer> analized = new ArrayList<>();
-        System.out.println(p);
 
         Integer k;
         k=1; o.set(startNode-1,1);
 
         Integer selectedNode;
+        System.out.print("Unvizited is: "+unvizited+"; ");
+        System.out.print("Vizited is: "+vizited+"; ");
+        System.out.println();
+
         while (!vizited.isEmpty())
         {
+
             selectedNode = vizited.get(0);
+            System.out.println("Curent node selectes is: "+selectedNode);
 
             List<Integer> selectedNodeLinks= getLinks(selectedNode);
 
-
             if (!selectedNodeLinks.isEmpty())
             {
-                k++;
+
                 for (int i = 0; i < selectedNodeLinks.size(); i++)
                 {
                     if (unvizited.contains(selectedNodeLinks.get(i)))
@@ -85,6 +86,7 @@ public class Graph
                     unvizited.remove(selectedNodeLinks.get(i));
                     vizited.add(selectedNodeLinks.get(i));
                     p.set(selectedNodeLinks.get(i)-1,selectedNode);
+                    k++;
                     o.set(selectedNodeLinks.get(i)-1,k);
                     }
 
@@ -92,6 +94,14 @@ public class Graph
             }
             vizited.remove(selectedNode);
             analized.add(selectedNode);
+            System.out.print("Unvizited is: ");
+            System.out.print(unvizited);
+            System.out.println();
+            System.out.print("Vizited is: ");
+            System.out.print(vizited);
+            System.out.println();
+            System.out.print("Analized is: ");
+            System.out.println(analized);
         }
 
         System.out.println("And the result is: ");

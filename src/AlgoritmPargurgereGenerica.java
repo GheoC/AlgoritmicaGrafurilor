@@ -20,7 +20,7 @@ public class AlgoritmPargurgereGenerica {
         graph.addNode(node4);
         graph.addNode(node5);
 
-        graph.printGraph();
+     //   graph.printGraph();
 
 
         graph.parcurgereGenerala(1);
